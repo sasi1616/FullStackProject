@@ -1,0 +1,58 @@
+<div class="col-md-6 offset-md-3">
+    <h3><b> Book Your Flight Today</b> </h3>
+    <form >
+        <div class="form-container">
+        <div class="form-group">
+           
+            <input readonly type="text" class ="form-control" id = "flightName"   tabindex="0" data-toggle="tooltip" title="don't change this content"
+                [(ngModel)] = "airline.flightName" name = "flightName" placeholder="Airline name" required minlength="3" maxlength="20">
+        </div>
+
+        <div class="form-group">
+           
+            <input readonly type="text" class ="form-control" id = "source" placeholder="starting point"   tabindex="0" data-toggle="tooltip" title="don't change this content"
+                [(ngModel)] = "airline.source" name = "source" required minlength="3" maxlength="20">
+        </div>
+
+        <div class="form-group">
+          
+            <input readonly type="text" class ="form-control" id = "destination"  tabindex="0" data-toggle="tooltip" title="don't change this content"
+                [(ngModel)] = "airline.destination" name = "destination" placeholder=" Enter Destination" required minlength="3" maxlength="20">
+        </div>
+
+        <div class="form-group">
+           
+            <input readonly type="text" class ="form-control" id = "cost"   tabindex="0" data-toggle="tooltip" title="don't change this content"
+                [(ngModel)] = "airline.noOfseats" name = "seats" placeholder="Seating Capacity" required minlength="3" maxlength="20" >
+        </div>
+
+        <div class="form-group">
+           
+            <input readonly type="number" class ="form-control" id = "cost"   tabindex="0" data-toggle="tooltip" title="don't change this content"
+                [(ngModel)] = "airline.cost" name = "cost" placeholder="Fare" required minlength="3" maxlength="20" >
+        </div>
+
+       
+    </div>
+
+    <div class="form-group">
+          <label><b>Howmany seats you want?</b></label> 
+        <input  type="number" class ="form-control" id = "numberOfSeats"   tabindex="0" 
+            [(ngModel)] = "airline.numberOfSeats" name = "numberOfSeats" placeholder="Enter seats" required minlength="3" maxlength="10" >
+    </div>
+
+    <button class = "btn btn-outline-primary"  style="margin-left: 170px;" (click)="myFunction()">calculate</button>
+
+
+    <div class="form-group">
+        <label><b>Total Price</b></label> 
+      <input type="number" class ="form-control" id = "calculatedPrice"   tabindex="0" 
+          [(ngModel)] = "airline.calculatedPrice" name = "calculatedPrice"  required minlength="3" maxlength="20" size="10" >
+  </div>
+        
+
+        <button class = "btn btn-outline-primary"  style="margin-left: 150px;" (click)="proceedPayment()">ProceedPayment</button>
+    
+    </form>
+    </div> 
+

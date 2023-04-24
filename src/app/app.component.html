@@ -1,0 +1,56 @@
+<style>
+    .navbar-nav{
+      margin-left: auto;
+    }
+  </style>
+  
+  <nav class="navbar navbar-expand-sm navbar-dark">
+    <ul class = "nav navbar-nav nav-tabs">
+     
+        
+      
+        <li class = "nav-item">
+            <a *ngIf="loginService.isUserLoggedIn()" routerLink="/airlines" class="nav-link">Airline List</a>
+          <!--  <a routerLink="employees" routerLinkActive="active" class="nav-link" >Employee List</a>-->
+        </li>
+        <li class = "nav-item">
+            <a *ngIf="loginService.isUserLoggedIn()" routerLink="/create-airline" class="nav-link">Add New Airline</a>
+          <!--  <a routerLink="create-employee" routerLinkActive="active" class="nav-link" >Add Employee</a>-->
+        </li>
+        <li>
+            <a *ngIf="!loginService.isUserLoggedIn()" routerLink="/login" class="nav-link">Login</a>
+        </li>
+        <li class = "nav-item">
+          <a *ngIf="loginService.isUserLoggedIn()" routerLink="/feedback-form" class="nav-link">Feedback</a>
+        <!--  <a routerLink="employees" routerLinkActive="active" class="nav-link" >Employee List</a>-->
+      </li>
+      <li class = "nav-item">
+        <a *ngIf="loginService.isUserLoggedIn()" routerLink="/contact-form" class="nav-link">contact</a>
+      <!--  <a routerLink="employees" routerLinkActive="active" class="nav-link" >Employee List</a>-->
+    </li>
+      <li class = "nav-item">
+        <a *ngIf="loginService.isUserLoggedIn()" routerLink="/profile-card" class="nav-link">Profile</a>
+      <!--  <a routerLink="employees" routerLinkActive="active" class="nav-link" >Employee List</a>-->
+    </li>
+   
+        <li class = "nav-item" >
+          <a  *ngIf="loginService.isUserLoggedIn()" routerLink="/logout-page" routerLinkActive="active" class="nav-link" >logout</a>
+      </li>  
+    </ul>
+  
+  </nav>
+  <marquee direction="right" behavior="alernate" scrollamount="10" scrolldelay="15" loop="3"><h3> {{title}} </h3></marquee>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script>
+  $(window).scroll(function(){
+    if($(window).scrollTop()){
+      $("nav").addClass("black");
+    }
+    else{
+      $("nav").removeClass("black");
+    }
+  });
+  </script>
+  <div class = "container">
+    <router-outlet></router-outlet>
+  </div>

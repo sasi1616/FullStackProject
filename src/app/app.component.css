@@ -1,0 +1,15 @@
+nav .black ul{
+    background: #000;
+}
+nav{
+    background-color: darkmagenta;
+    top: 0px;
+}
+h3{
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+ul,li{
+    padding: 5px 20px 5px 20px;
+    
+}

@@ -1,0 +1,39 @@
+<div class="col-md-6 offset-md-3">
+    <h3><b> Update Airline Details</b> </h3>
+    <form (ngSubmit) = "onSubmit()">
+        <div class="form-container">
+        <div class="form-group">
+           
+            <input  type="text" class ="form-control" id = "flightName"   tabindex="0" data-toggle="tooltip" title="Enter flight name"
+                [(ngModel)] = "airline.flightName" name = "flightName" placeholder="Airline name" required minlength="3" maxlength="20">
+        </div>
+
+        <div class="form-group">
+           
+            <input type="text" class ="form-control" id = "source" placeholder="starting point"   tabindex="0" data-toggle="tooltip" title="Enter source"
+                [(ngModel)] = "airline.source" name = "source" required minlength="3" maxlength="20">
+        </div>
+
+        <div class="form-group">
+          
+            <input type="text" class ="form-control" id = "destination"  tabindex="0" data-toggle="tooltip" title="Enter Destination"
+                [(ngModel)] = "airline.destination" name = "destination" placeholder=" Enter Destination" required minlength="3" maxlength="20">
+        </div>
+
+        <div class="form-group">
+           
+            <input type="text" class ="form-control" id = "cost"   tabindex="0" data-toggle="tooltip" title="Enter cost"
+                [(ngModel)] = "airline.cost" name = "cost" placeholder="Fare" required minlength="3" maxlength="20" >
+        </div>
+
+        <div class="form-group">
+           
+            <input type="text" class ="form-control" id = "cost"   tabindex="0" data-toggle="tooltip" title="Enter seating capacity"
+                [(ngModel)] = "airline.noOfseats" name = "seats" placeholder="Seating Capacity" required minlength="3" maxlength="20" >
+        </div>
+    </div>
+
+        <button class = "btn btn-outline-primary" type ="submit" style="margin-left: 150px;">Submit</button>
+    
+    </form>
+    </div> 

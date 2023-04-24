@@ -1,0 +1,22 @@
+form{
+   background-image: url(src\assets\images\airline6.jpg);
+    padding: 20px 50px;
+    border-radius: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+h3{
+    font-family: 'Times New Roman', Times, serif;
+    color:deeppink; 
+    text-align: center;
+}
+.form-group{
+    color: deeppink;
+}
+button{
+    color: blue;
+}
+
+  
+   

@@ -1,0 +1,55 @@
+
+<div class="col-md-6 offset-md-3">
+    <h3 style="text-align: center;color: deeppink;font-family: 'Times New Roman', Times, serif;"> ADD AIRLINE DETAILS </h3>
+    <form (ngSubmit) = "onSubmit()">
+
+        <div class="form-group">
+            
+            <input type="text" class ="form-control" id = "flightName" 
+                [(ngModel)] = "airline.flightName" name = "flightName" placeholder="Enter Flight Name" required minlength="3" maxlength="20">
+        </div>
+
+        <div class="form-group">
+            
+            <input type="text" class ="form-control" id = "source"
+                [(ngModel)] = "airline.source" name = "source" placeholder="Enter the source" required minlength="3" maxlength="20" >
+        </div>
+
+        <div class="form-group">
+            
+            <input type="text" class ="form-control" id = "destination"
+                [(ngModel)] = "airline.destination" name = "destination" placeholder="Enter Destination" required minlength="3" maxlength="20" >
+        </div>
+
+        <div class="form-group">
+            
+            <input type="text" class ="form-control" id = "noOfseats"
+                [(ngModel)] = "airline.noOfseats" name = "noOfseats" placeholder="Enter Number of seats availability" required minlength="3" maxlength="20">
+        </div>
+
+        <div class="form-group" >
+            
+            <input type="text" class ="form-control" id = "cost"
+                [(ngModel)] = "airline.cost" name = "cost" placeholder="Enter Fare"minlength="3" maxlength="20" required>
+        </div>
+        <p><b>Choose a Flight Type</b></p>
+        <div class="form-check form-check-inline">
+            
+            <input class="form-check-input" type="radio" name="isInternationalFlight"
+            [(ngModel)]="airline.isInternationalFlight" id="inlineRadio1" value="true">
+
+            <label class="form-check-label" for="inlineRadio1"><b>International Flight</b></label>
+          </div>
+          <div class="form-check form-check-inline" style="margin-left: 40px;">
+            <input class="form-check-input" type="radio" name="isInternationalFlight" 
+            [(ngModel)]="airline.isInternationalFlight" id="inlineRadio2" value="false">
+            
+            <label class="form-check-label" for="inlineRadio2"><b>Domestic Flight</b></label>
+          </div>
+        
+        <button class = "btn btn-primary" type ="submit"style="margin-left:250px;">Submit</button>
+         
+        
+    </form>
+    </div> 
+   

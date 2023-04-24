@@ -1,0 +1,20 @@
+h3{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+tr{
+    color:maroon;
+}
+table{
+    
+    background-image: url(src\assets\images\airline5.jpg);
+    
+}
+th,td{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: larger;
+
+}
